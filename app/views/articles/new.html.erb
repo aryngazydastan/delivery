@@ -1,0 +1,27 @@
+<div class="blocks" style=" padding-top: 10px; background-color: #FFCC66; padding-left: 10px; margin-top: 5px; width: 810px; border-radius: 3px; margin-left: 230px; ">
+<table>
+<%= form_for :article, url: articles_path do |f| %>
+<td>
+  <p>
+    <%= f.text_field :title, class: 'form-control', style: 'width: 210px; height: 30px; font-size: 13px; font-weight: bold; ', placeholder: "Введите мобильный номер"  %>
+  </p>
+</td>
+<td>
+
+  <p style=" padding-left: 10px; ">
+    <%= f.select(:text, ['Конверт', 'Бандероль', 'Мелкая техника', 'Крупная техника', 'Еда', 'Одежда', 'Продукты из магазина', 'Продукты из супермаркета'], {include_blank: "Выберите тип посылки"}, { :class => 'btn btn-md btn-default', :style => 'width: 250px; height: 30px; font-size: 13px; font-weight: bold; ' }) %>
+  </p>
+</td>
+<td>
+<p style=" padding-left: 10px; ">
+   <%= f.select(:city_id, ['Алатауский район', 'Алмалинский район', 'Ауэзовский район', 'Бостандыкский район', 'Жетысуский район', 'Медеуский район', 'Наурызбайский район', 'Турксибский район'], {include_blank: "Выберите район"}, { :class => 'btn btn-md btn-default', :style => 'width: 200px; height: 30px; font-size: 13px; font-weight: bold; ' }) %>
+ </p>
+</td>
+<td>
+  <p style=" padding-left: 10px; ">
+    <%= f.submit 'Отправить', ({ :class => 'btn btn-default', :style => 'width: 100px; height: 30px; font-size: 13px; font-weight: bold; ' }) %>
+  </p>
+</td>
+<% end %>
+</table>
+</div>

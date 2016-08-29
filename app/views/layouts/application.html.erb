@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery1</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta http-equiv="refresh" />
+</head>
+<body>
+
+<script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem( 'firstLoad' ) )
+    {
+      localStorage[ 'firstLoad' ] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem( 'firstLoad' );
+  }
+})();
+
+</script>
+
+
+<div class="background-image" style=" margin-top: 250px; ">
+
+
+
+	<div class="blocks" style=" background-color: #351C15; width: 150px; height: 55px; margin-left: 230px; border-radius: 3px; margin-top: 1px; ">
+		<h5 style=" color: white; padding-left: 17px; padding-top: 10px; ">Быстрый курьер</h5>
+	</div>
+
+	<div class="blocks" style=" background-color: #351C15; width: 300px; height: 55px; margin-left: 1px; border-radius: 3px; ">
+		<h5 style=" color: #FFCC66; padding-top: 10px; padding-left: 25px; ">Каждая вторая доставка бесплатно</h5>
+	</div>
+
+	<div class="blocks" style=" background-color: #351C15; width: 350px; height: 55px; margin-left: 1px; border-radius: 3px; ">
+		<h5 style=" color: #FFCC66; padding-top: 10px; padding-left: 25px; "><%= link_to "Новая доставка", new_article_path %></h5>
+	</div>
+
+
+
+
+
+
+<%= yield %>
+</div>
+
+</body>
+</html>
+
