@@ -17,6 +17,7 @@
 
 
 .blocks {
+	position: fixed;
 	display: inline-block;  
 	width: 1000px;
 }
