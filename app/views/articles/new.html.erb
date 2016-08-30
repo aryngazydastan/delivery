@@ -1,7 +1,6 @@
 <div class="blocks" style=" padding-top: 10px; background-color: #FFCC66; padding-left: 10px; margin-top: 5px; width: 810px; border-radius: 3px; margin-left: 230px; ">
 <table>
-
-<%= form_for (@article, { class: "directUpload", data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host } }) do |f| %>
+<%= form_for :article, url: articles_path do |f| %>
 <td>
   <p>
     <%= f.text_field :title, class: 'form-control', style: 'width: 210px; height: 30px; font-size: 13px; font-weight: bold; ', placeholder: "Введите мобильный номер"  %>
